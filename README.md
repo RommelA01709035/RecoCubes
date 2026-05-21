@@ -1,5 +1,5 @@
 # RecoCubes
-Este repositorio es para el proyecto de la matería tc2002b. En este proyecto vamos a usar redes neuronales convolutivas para la clasificación de imagenes. 
+Este repositorio es para el proyecto de la materia tc2002b. En este proyecto vamos a usar redes neuronales convolutivas para la clasificación de imagenes. 
 
 # Descripción del Proyecto
 Este proyecto tiene como objetivo desarrollar un modelo clasificador de imágenes con la capacidad suficiente para distinguir entre 8 cubos distintos de Minecraft. 
@@ -9,7 +9,7 @@ Este proyecto tiene como objetivo desarrollar un modelo clasificador de imágene
 En la materia vemos redes neuronales convolucionales, las cuales tienen la capacidad de inferir alguna cosa, en nuestro contexto vamos a estar infiriendo casos de clasificación o regresión. Este problema aborda la clasificación de imágenes.
 
 ## Descripción del Dataset
-El dataset proveniente de [está pagína](https://huggingface.co/datasets/HaiPenglai/BlockCraft-Dataset) tiene 100 fotos de 20 bloques divididas en carpetas como se ve en la siguientes imagenes:
+El dataset proveniente de [esta página](https://huggingface.co/datasets/HaiPenglai/BlockCraft-Dataset) tiene 100 fotos de 20 bloques divididas en carpetas como se ve en las siguientes imágenes:
 
 <div align="center">
   <figure>
@@ -26,3 +26,7 @@ El dataset proveniente de [está pagína](https://huggingface.co/datasets/HaiPen
     <figcaption><em>Figura 2. Fotos dentro de una carpeta del dataset.</em></figcaption>
   </figure>
 </div>
+
+Como podemos observar, por la cantidad de imágenes y su similitud, a pesar de tener la misma cantidad de imágenes por cada bloque, se van a preprocesar las imágenes para que tengan fondos distintos y se va a hacer data augmentation para tener más cantidad de imágenes.
+
+
