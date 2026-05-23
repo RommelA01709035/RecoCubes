@@ -1,8 +1,8 @@
 # RecoCubes
-Este repositorio es para el proyecto de la materia tc2002b. En este proyecto vamos a usar redes neuronales convolutivas para la clasificación de imagenes. 
+Este repositorio es para el proyecto de la materia tc2002b. En este proyecto vamos a usar redes neuronales convolutivas para la clasificación de imagenes.
 
 # Descripción del Proyecto
-Este proyecto tiene como objetivo desarrollar un modelo clasificador de imágenes con la capacidad suficiente para distinguir entre 8 cubos distintos de Minecraft. 
+RecoCubes (Reconocer Cubos) tiene como objetivo desarrollar un modelo clasificador de imágenes con la capacidad suficiente para distinguir entre 9 cubos distintos de Minecraft. 
 
 ## Contexto 
 
