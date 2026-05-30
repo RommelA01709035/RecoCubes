@@ -47,8 +47,21 @@ Este proyecto va a identificar los siguientes cubos:
 
 ## Preprocesamiento:
 1. Se verificó el tamaño de las imágenes para que todas tuvieran el mismo tamaño, en este caso, 128x128.
-2. Se hizo la técnica de data augmentation para generar más datos.
-3. Se convirtieron las imágenes a rangos entre 0.0 y 1.0.
+2. Se hizo la técnica de data augmentation para generar más datos usando el criterio del paper "Deep Learning in Endoscopic Ultrasound: A Breakthrough in Detecting Distal Cholangiocarcinoma" (Orzan et al., 2024) donde tenían un dataset reducido de 156 imágenes con una arquitectura de redes convolucionales usando ResNet50. Los criterios fueron:
+  1.   Rotación aleatoria -30 y +30
+  2.   Reflejo horizontal
+  3.   Traslación en X hasta +- 10 pixeles
+  4.   Traslación en Y hasta +- 10 pixeles
+  5.   Escalamiento entre 0.9 y 1.0
+No se uso 
+4. Se convirtieron las imágenes a rangos entre 0.0 y 1.0.
 
 ## Link del Notebook:
-[Este es el link del NoteBook](https://colab.research.google.com/drive/1Q5tc7Oq1ucE3rf68SjzLTgfQpv8-9B78?usp=sharing) si hay algún problema en este repositorio dejo el archivo de igual forma
+[Este es el link del NoteBook](https://colab.research.google.com/drive/1Q5tc7Oq1ucE3rf68SjzLTgfQpv8-9B78?usp=sharing) si hay algún problema en este repositorio, dejo el archivo de igual forma.
+
+
+
+
+## Referencias
+
+Orzan, R. I., Santa, D., Lorenzovici, N., Zareczky, T. A., Pojoga, C., Agoston, R., Dulf, E.-H., & Seicean, A. (2024). Deep Learning in Endoscopic Ultrasound: A Breakthrough in Detecting Distal Cholangiocarcinoma. Cancers, 16(22), 3792. [https://doi.org/10.3390/cancers16223792](https://doi.org/10.3390/cancers16223792) 
