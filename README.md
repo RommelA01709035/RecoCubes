@@ -48,12 +48,14 @@ Este proyecto va a identificar los siguientes cubos:
 ## Preprocesamiento:
 1. Se verificó el tamaño de las imágenes para que todas tuvieran el mismo tamaño, en este caso, 128x128.
 2. Se hizo la técnica de data augmentation para generar más datos usando el criterio del paper "Deep Learning in Endoscopic Ultrasound: A Breakthrough in Detecting Distal Cholangiocarcinoma" (Orzan et al., 2024) donde tenían un dataset reducido de 156 imágenes con una arquitectura de redes convolucionales usando ResNet50. Los criterios fueron:
-  1.   Rotación aleatoria -30 y +30
-  2.   Reflejo horizontal
-  3.   Traslación en X hasta +- 10 pixeles
-  4.   Traslación en Y hasta +- 10 pixeles
-  5.   Escalamiento entre 0.9 y 1.0
-No se uso 
+   A)   Rotación aleatoria -30 y +30
+   B)   Reflejo horizontal
+   C)   Traslación en X hasta +- 10 pixeles
+   D)   Traslación en Y hasta +- 10 pixeles
+   E)   Escalamiento entre 0.9 y 1.0
+
+No se usó la generación de ruido gaussiano como dice en el paper porque lo consideré exagerado para este caso de uso.
+
 4. Se convirtieron las imágenes a rangos entre 0.0 y 1.0.
 
 ## Link del Notebook:
