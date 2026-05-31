@@ -48,43 +48,41 @@ Este proyecto va a identificar los siguientes cubos:
 ## Trabajos relacionados.
 En el artículo "MiDaS: a large-scale Minecraft dataset for non-natural image benchmarking" se presenta MiDaS como un dataset de imágenes de Minecraft. El objetivo principal del documento es proporcionar un benchmark para evaluar algoritmos de visión artificial en imágenes del mundo real o generadas en entornos virtuales. Se usaron 8 modelos distintos . El dataset contiene 36,000 imágenes etiquetadas distribuidas en 60 clases correspondientes a los bloques del juego, como pueden ser lava, cristal, arena, entre otros. En este caso solamente se midió el accuracy individual al reconocer cada bloque por parte del modelo y solamente se reportan los mejores y los peores. En la siguiente tabla podemos observar el accuracy de los bloques disponibles que igual usaremos para entrenar el modelo de RecoCube:
 
-| Bloque | Accuracy | Modelo |
-|---|---|---|
-| Brick | 0.0 | Sup-RN50-Rdm |
-| Brick | 0.965 | DINO-RN50-IN |
-| Glowstone | 0.082 | Sup-RN50-IN |
-| Glowstone | 0.408 | Sup-RN50-Rdm |
-| Glowstone | 0.964 | DINO-RN50-IN |
-| Netherrack | 0.843 | DINO-RN50-MiDaS |
-| Netherrack | 0.539 | Sup-RN50-Rdm |
-| Netherrack | 0.585 | Sup-RN50-Rdm |
-| Netherrack | 0.5 | Sup-RN50-Rdm |
-| Netherrack | 0.958 | SimCLR-RN50-MiDaS |
-| Netherrack | 0.77 | SimCLR-RN50-IN |
-| Netherrack | 0.777 | DINO-RN50-IN |
-| Oak_Planks | 0.868 | SimCLR-RN50-IN |
-| Gold Ore | 1.0 | Sup-RN50-IN |
-| Gold Ore | 1.0 | DINO-RN50-MiDaS |
-| Gold Ore | 0.961 | DINO-RN50-MiDaS |
-| Gold Ore | 1.0 | DINO-ViT-MiDaS |
-| Gold Ore | 1.0 | DINO-ViT-MiDaS |
-| Gold Ore | 1.0 | DINO-ViT-MiDaS |
-| Gold Ore | 1.0 | DINO-ViT-MiDaS |
-| Gold Ore | 0.965 | DINO-ViT-MiDaS |
-| Gold Ore | 0.951 | DINO-ViT-MiDaS |
-| Gold Ore | 0.958 | DINO-RN50-IN |
-| Gold Ore | 0.916 | Sup-RN50-IN |
-| Emerald Block | 0.999 | SimCLR-RN50-IN |
-| Emerald Block | 0.998 | DINO-RN50-MiDaS |
-| Emerald Block | 0.999 | DINO-ViT-MiDaS |
-| Emerald Block | 0.985 | DINO-ViT-IN |
-| Emerald Block | 0.595 | DINO-ViT-IN |
-| Emerald Block | 1.0 | DINO-ViT-MiDaS |
-| Emerald Block | 1.0 | DINO-ViT-MiDaS |
-| Sand | No reportado | - |
-| Diamond Ore | No reportado | - |
-| Iron Ore | No reportado | - |
-
+| Bloque | Accuracy | Modelo | Evaluación | % Labels |
+|---|---|---|---|---|
+| Brick | 0.0 | Sup-RN50-Rdm | Fine-tuning | 1% |
+| Brick | 0.965 | DINO-RN50-IN | Linear evaluation | 5% |
+| Glowstone | 0.082 | Sup-RN50-IN | Fine-tuning | 1% |
+| Glowstone | 0.408 | Sup-RN50-Rdm | Linear evaluation | 5% |
+| Glowstone | 0.964 | DINO-RN50-IN | Linear evaluation | 5% |
+| Netherrack | 0.843 | DINO-RN50-MiDaS | Fine-tuning | 1% |
+| Netherrack | 0.539 | Sup-RN50-Rdm | Linear evaluation | 1% |
+| Netherrack | 0.585 | Sup-RN50-Rdm | Linear evaluation | 5% |
+| Netherrack | 0.5 | Sup-RN50-Rdm | Fine-tuning | 1% |
+| Netherrack | 0.958 | SimCLR-RN50-MiDaS | Linear evaluation | 1% |
+| Netherrack | 0.77 | SimCLR-RN50-IN | Linear evaluation | 1% |
+| Netherrack | 0.777 | DINO-RN50-IN | Linear evaluation | 1% |
+| Oak_Planks | 0.868 | SimCLR-RN50-IN | Fine-tuning | 5% |
+| Gold Ore | 1.0 | Sup-RN50-IN | Fine-tuning | 5% |
+| Gold Ore | 1.0 | DINO-RN50-MiDaS | Linear evaluation | 5% |
+| Gold Ore | 0.961 | DINO-RN50-MiDaS | Linear evaluation | 1% |
+| Gold Ore | 1.0 | DINO-ViT-MiDaS | Fine-tuning | 5% |
+| Gold Ore | 1.0 | DINO-ViT-MiDaS | Linear evaluation | 1% |
+| Gold Ore | 1.0 | DINO-ViT-MiDaS | Linear evaluation | 5% |
+| Gold Ore | 0.951 | DINO-ViT-MiDaS | Fine-tuning | 1% |
+| Gold Ore | 0.965 | Sup-RN50-IN | Fine-tuning | 1% |
+| Gold Ore | 0.958 | DINO-RN50-IN | Fine-tuning | 1% |
+| Gold Ore | 0.916 | Sup-RN50-IN | Linear evaluation | 1% |
+| Emerald Block | 0.999 | SimCLR-RN50-IN | Fine-tuning | 5% |
+| Emerald Block | 0.998 | DINO-RN50-MiDaS | Fine-tuning | 5% |
+| Emerald Block | 0.999 | DINO-ViT-MiDaS | Fine-tuning | 5% |
+| Emerald Block | 0.985 | DINO-ViT-IN | Fine-tuning | 5% |
+| Emerald Block | 0.595 | DINO-ViT-IN | Fine-tuning | 1% |
+| Emerald Block | 1.0 | DINO-ViT-MiDaS | Linear evaluation | 1% |
+| Emerald Block | 1.0 | DINO-ViT-MiDaS | Linear evaluation | 5% |
+| Sand | No reportado | - | - | - |
+| Diamond Ore | No reportado | - | - | - |
+| Iron Ore | No reportado | - | - | - |
 
 ## Preprocesamiento:
 1. Se verificó el tamaño de las imágenes para que todas tuvieran el mismo tamaño, en este caso, 128x128.
