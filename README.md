@@ -58,6 +58,12 @@ No se usó la generación de ruido gaussiano como dice en el paper porque lo con
 
 4. Se convirtieron las imágenes a rangos entre 0.0 y 1.0.
 
+## Desarrollo de los modelos.
+
+### Arquitectura:
+En los dos modelos presentados tienen la arquitectura de 
+1 capa convolusional de dos dimensiones con una función de actrivación relu.
+
 ## Link del Notebook:
 [Este es el link del NoteBook](https://colab.research.google.com/drive/1Q5tc7Oq1ucE3rf68SjzLTgfQpv8-9B78?usp=sharing) si hay algún problema en este repositorio, dejo el archivo de igual forma.
 
