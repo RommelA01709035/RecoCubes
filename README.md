@@ -177,21 +177,19 @@ Al comparar los datos del estado del arte en el paper que encontré y mi problem
 ## Probando en el mundo real
 Aquí comparamos los dos modelos con imagenes sacadas de la web.
 
-Imagen Fácil - Reconoicer el diamante
+Imagen Fácil - Reconocer el diamante
 <img width="736" height="736" alt="diamond_ore_test" src="https://github.com/user-attachments/assets/696d739c-4210-4d86-89c0-6fadc48c5730" />
+
+Resultado:
+<img width="777" height="647" alt="image" src="https://github.com/user-attachments/assets/28d65312-9ad6-4ca0-b062-c2a3a5f13f60" />
 
 Imagen Mediana - Reconocer Glowstone
 
 <img width="278" height="181" alt="glostone_group" src="https://github.com/user-attachments/assets/8a707e97-2a77-4cc0-b493-825b03fa1487" />
 
-Imagen mediana - Reconocer la arena
+Resultado:
 
-<img width="854" height="480" alt="Sand PNG" src="https://github.com/user-attachments/assets/ca1f350f-78e2-4b5f-97ec-266e4abd56e8" />
-
-Imagen Compleja - Reconocer el gold ore
-
-<img width="300" height="300" alt="Nether_Gold_Ore_JE2_BE1" src="https://github.com/user-attachments/assets/3ab0a1a1-5d64-45d8-b075-c4a219917dca" />
-
+<img width="647" height="690" alt="image" src="https://github.com/user-attachments/assets/e288250e-643f-4e9c-956c-c311a1c0c38b" />
 
 
 ## Link del Notebook:
