@@ -1,5 +1,5 @@
 # RecoCubes
-Este repositorio es para el proyecto de la materia tc2002b. En este proyecto vamos a usar redes neuronales convolutivas para la clasificación de imagenes.
+Este repositorio es para el proyecto de la materia tc2002b. En este proyecto vamos a usar redes neuronales convolutivas para la clasificación de imágenes.
 
 # Descripción del Proyecto
 RecoCubes (Reconocer Cubos) tiene como objetivo desarrollar un modelo clasificador de imágenes con la capacidad suficiente para distinguir entre 9 cubos distintos de Minecraft. 
@@ -46,7 +46,7 @@ Este proyecto va a identificar los siguientes cubos:
 [Link del drive](https://drive.google.com/drive/folders/1sjX1jhd8eWBE2OShA1Z7cXSgO0JAbkWT?usp=sharing)
 
 ## Trabajos relacionados.
-En el artículo "MiDaS: a large-scale Minecraft dataset for non-natural image benchmarking" se presenta MiDaS como un dataset de imágenes de Minecraft. El objetivo principal del documento es proporcionar un benchmark para evaluar algoritmos de visión artificial en imágenes del mundo real o generadas en entornos virtuales. Se usaron 8 modelos distintos . El dataset contiene 36,000 imágenes etiquetadas distribuidas en 60 clases correspondientes a los bloques del juego, como pueden ser lava, cristal, arena, entre otros. En este caso solamente se midió el accuracy individual al reconocer cada bloque por parte del modelo y solamente se reportan los mejores y los peores. En la siguiente tabla podemos observar el accuracy de los bloques disponibles que igual usaremos para entrenar el modelo de RecoCube:
+En el artículo "MiDaS: a large-scale Minecraft dataset for non-natural image benchmarking" se presenta MiDaS como un dataset de imágenes de Minecraft. El objetivo principal del documento es proporcionar un benchmark para evaluar algoritmos de visión artificial en imágenes del mundo real o generadas en entornos virtuales. Se usaron 8 modelos distintos . El dataset contiene 36,000 imágenes etiquetadas distribuidas en 60 clases correspondientes a los bloques del juego, como pueden ser lava, cristal, arena, entre otros. En este caso, solo se midió el accuracy individual al reconocer cada bloque por parte del modelo y solo se reportan los mejores y los peores. En la siguiente tabla podemos observar el accuracy de los bloques disponibles que igual usaremos para entrenar el modelo de RecoCube:
 
 | Bloque | Accuracy | Modelo | Evaluación | % Labels |
 |---|---|---|---|---|
@@ -98,23 +98,73 @@ No se usó la generación de ruido gaussiano como dice en el paper porque lo con
 4. Se convirtieron las imágenes a un rango de 0.0 a 1.0.
 
 ## Desarrollo de los modelos.
+Tras hacer el primer modelo, decidí experimentar con el data augmentation, ya que mi dataset es pequeño, por lo que decidí hacer dos modelos: uno sin data augmentation y otro con data augmentation. Antes de implementarlo decidí buscar una criterio similar que se haya trabajado por lo que encontré el paper de " Deep Learning in Endoscopic Ultrasound: A Breakthrough in Detecting Distal Cholangiocarcinoma." y use su criterio en mi segundo modelo. En este avance no implementé el ResNet50 que se menciona en el paper  "MiDaS: a large-scale Minecraft dataset for non-natural image benchmarking".
 
-### Arquitectura:
+## Arquitectura:
 En los dos modelos presentados tienen la arquitectura de capas secuenciales conformadas por:
 1 capa convolucional de dos dimensiones con una función de activación relu, 10 filtros convolucionales, un kernel de tamaño 3x3 y un input shape 128x128 RGB.
 1 Flatten de 126x126x10.
 2 capas seguidas de capas densas con 256 neuronas con función de activación relu.
 1 capa de salida con 9 neuronas (acorde al número de clases) que muestra las probabilidades de cuál clase sería.
 
-La razón de esta arquitectura fue porque la usamos en el caso de uso de data augmentation en imágenes y decidí usarla y, como baseline, decidí aumentar una capa densa más.
+La razón de esta arquitectura fue que la usamos en el caso de uso de data augmentation en imágenes y decidí usarla y, como baseline, decidí aumentar una capa densa más.
+
+## Resultados
+### Train
+
+#### Modelo 1:
+
+<img width="547" height="435" alt="image" src="https://github.com/user-attachments/assets/4e3063ea-de63-439b-bb07-f7fb08386dc5" />
+
+<img width="556" height="435" alt="image" src="https://github.com/user-attachments/assets/b97ace84-e738-4429-8e12-d3b6b8bcefeb" />
+
+#### Modelo 2:
+<img width="553" height="435" alt="image" src="https://github.com/user-attachments/assets/2c19e189-4460-4f70-992d-1d4652bd3410" />
+
+<img width="553" height="435" alt="image" src="https://github.com/user-attachments/assets/c615eae7-8145-4dc7-94f5-132d095a831a" />
+
+### Validation
+
+#### Modelo 1:
+loss:       0.19886770844459534
+precision:  1.0
+recall:     0.9629629850387573
+f1_score:   [1.         1.         1.         1.         0.96774185 0.96551716
+ 1.         1.         1.        ]
+accuracy:        0.9925925731658936
+
+#### Modelo 2:
+loss:       0.032184671610593796
+precision:  1.0
+recall:     1.0
+f1_score:   [1. 1. 1. 1. 1. 1. 1. 1. 1.]
+accuracy:     1.0
+
+### Test
+
+#### Modelo 1:
+loss:       0.17742317914962769
+precision:  0.9922480583190918
+recall:     0.9481481313705444
+f1_score:   [1.         1.         1.         0.96551716 0.96774185 0.96551716
+ 1.         0.96774185 1.        ]
+accuracy:        0.9851852059364319
+
+#### Modelo 2:
+loss:       0.03148989379405975
+precision:  1.0
+recall:     1.0
+f1_score:   [1. 1. 1. 1. 1. 1. 1. 1. 1.]
+acc:        1.0
+
+
+## Interpretación
+
 
 
 ## Link del Notebook:
 [Este es el link del NoteBook](https://colab.research.google.com/drive/1Q5tc7Oq1ucE3rf68SjzLTgfQpv8-9B78?usp=sharing) si hay algún problema en este repositorio, dejo el archivo de igual forma.
 
-
-
-
 ## Referencias
-
+Torpey, D., Parkin, M., Alter, J., Klein, R., & James, S. (2024). MiDaS: A large-scale Minecraft dataset for non-natural image benchmarking. Journal of Electronic Imaging, 33(1), 013035. [https://doi.org/10.1117/1.JEI.33.1.013035](https://doi.org/10.1117/1.JEI.33.1.013035)
 Orzan, R. I., Santa, D., Lorenzovici, N., Zareczky, T. A., Pojoga, C., Agoston, R., Dulf, E.-H., & Seicean, A. (2024). Deep Learning in Endoscopic Ultrasound: A Breakthrough in Detecting Distal Cholangiocarcinoma. Cancers, 16(22), 3792. [https://doi.org/10.3390/cancers16223792](https://doi.org/10.3390/cancers16223792) 
