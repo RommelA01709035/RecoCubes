@@ -102,10 +102,10 @@ Tras hacer el primer modelo, decidí experimentar con el data augmentation, ya q
 
 ## Arquitectura:
 En los dos modelos presentados tienen la arquitectura de capas secuenciales conformadas por:
-1 capa convolucional de dos dimensiones con una función de activación relu, 10 filtros convolucionales, un kernel de tamaño 3x3 y un input shape 128x128 RGB.
-1 Flatten de 126x126x10.
-2 capas seguidas de capas densas con 256 neuronas con función de activación relu.
-1 capa de salida con 9 neuronas (acorde al número de clases) que muestra las probabilidades de cuál clase sería.
+- 1 capa convolucional de dos dimensiones con una función de activación relu, 10 filtros convolucionales, un kernel de tamaño 3x3 y un input shape 128x128 RGB.
+- 1 Flatten de 126x126x10.
+- 1 capa densa con 256 neuronas con función de activación relu.
+- 1 capa de salida con 9 neuronas (acorde al número de clases) que muestra las probabilidades de cuál clase sería.
 
 La razón de esta arquitectura fue que la usamos en el caso de uso de data augmentation en imágenes y decidí usarla y, como baseline, decidí aumentar una capa densa más.
 
@@ -169,7 +169,7 @@ accuracy:        1.0
 
 
 ## Interpretación de los datos
-Podemos observar que los dos modelos aprendieron bien, ya que podemos ver un comportamiento esperado en las gráficas de loss y accuracy (accuracy sube y loss baja), lo que es una buena señal para nuestra arquitectura, pues no hay una sospecha de que el dataset sea complejo. En validation podemos observar valores altos en los dos modelos, pero el modelo 1 tiende a confundir ciertas clases lo cual podemos observarlo en la precisioón midiendo y en recall ya que los dos aunque se acercan a uno nos estan diciendo que hay muy pocos casos donde se confunde el modelo 1 (algo que podemos ver en la matriz de confusión d euna manera más detallada), mientras que el modelo 2 tiene metricas muy elevadas significando que probablemente puede hjaber un overfitting si cambiamos las imagenes con las cuales se está probando. En el test podemos observar que el modelo 1 empeoró y confunde más clases, lo que nos indica que no sabe generalizar mucho los patrones. Aunque tenga métricas altas, podríamos eliminar esa confusión con un mejor entrenamiento (como lo hicimos con el modelo 2) o modificar los hiperparámetros, porque si le movemos a la arquitectura del modelo, en mi opinión, si hacemos más complejo el modelo, posiblemente se pueda confundir más.
+Podemos observar que los dos modelos aprendieron bien, ya que podemos ver un comportamiento esperado en las gráficas de loss y accuracy (accuracy sube y loss baja), lo que es una buena señal para nuestra arquitectura, pues no hay una sospecha de que el dataset sea complejo. En validation podemos observar valores altos en los dos modelos, pero el modelo 1 tiende a confundir ciertas clases lo cual podemos observarlo en la precisioón midiendo y en recall ya que los dos aunque se acercan a uno nos estan diciendo que hay muy pocos casos donde se confunde el modelo 1 (algo que podemos ver en la matriz de confusión de una manera más detallada), mientras que el modelo 2 tiene metricas muy elevadas significando que probablemente puede hjaber un overfitting si cambiamos las imagenes con las cuales se está probando. En el test podemos observar que el modelo 1 empeoró y confunde más clases, lo que nos indica que no sabe generalizar mucho los patrones. Aunque tenga métricas altas, podríamos eliminar esa confusión con un mejor entrenamiento (como lo hicimos con el modelo 2) o modificar los hiperparámetros, porque si le movemos a la arquitectura del modelo, en mi opinión, si hacemos más complejo el modelo, posiblemente se pueda confundir más.
 
 ## Conclusión
 Al comparar los datos del estado del arte en el paper que encontré y mi problemática, considero que tal vez mi problemática se puede volver un poco más compleja, ya que el caso de uso del paper compara biomas enteros y no solo cubos. Comparando algunos modelos que se mencionan en el paper, podemos sobrevalorar mi modelo y decir que tiene mejores estadísticas para detectar algunos cubos mejor que otros modelos mencionados en el paper, como por ejemplo el bloque de esmeralda, el netherrack y los ladrillos. También podemos ver una gran similitud cuando detectan los ores de diamante, oro y hierro. Al probar con otras imágenes del mundo real, en mi modelo 2 podemos ver una notoriedad en el resultado del modelo 2 vs. modelo 1 porque hay patrones que aprendió de una mejor manera que el modelo 1.Finalmente, en los siguientes pasos podríamos probar el modelo con imágenes más complejas, como veremos en secciones posteriores.
