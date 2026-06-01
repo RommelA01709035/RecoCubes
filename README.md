@@ -155,7 +155,17 @@ loss:       0.03148989379405975
 precision:  1.0
 recall:     1.0
 f1_score:   [1. 1. 1. 1. 1. 1. 1. 1. 1.]
-acc:        1.0
+accuracy:        1.0
+
+### Matriz de confusión
+
+#### Modelo 1:
+
+<img width="888" height="790" alt="image" src="https://github.com/user-attachments/assets/df66e7e0-6f9e-4305-8682-b74806827fe2" />
+
+#### Modelo 2:
+
+<img width="888" height="790" alt="image" src="https://github.com/user-attachments/assets/96ed379f-8f9b-45f9-af2b-d04635d2c607" />
 
 
 ## Interpretación
@@ -167,4 +177,5 @@ acc:        1.0
 
 ## Referencias
 Torpey, D., Parkin, M., Alter, J., Klein, R., & James, S. (2024). MiDaS: A large-scale Minecraft dataset for non-natural image benchmarking. Journal of Electronic Imaging, 33(1), 013035. [https://doi.org/10.1117/1.JEI.33.1.013035](https://doi.org/10.1117/1.JEI.33.1.013035)
+
 Orzan, R. I., Santa, D., Lorenzovici, N., Zareczky, T. A., Pojoga, C., Agoston, R., Dulf, E.-H., & Seicean, A. (2024). Deep Learning in Endoscopic Ultrasound: A Breakthrough in Detecting Distal Cholangiocarcinoma. Cancers, 16(22), 3792. [https://doi.org/10.3390/cancers16223792](https://doi.org/10.3390/cancers16223792) 
