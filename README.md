@@ -174,6 +174,26 @@ Podemos observar que los dos modelos aprendieron bien, ya que podemos ver un com
 ## Conclusión
 Al comparar los datos del estado del arte en el paper que encontré y mi problemática, considero que tal vez mi problemática se puede volver un poco más compleja, ya que el caso de uso del paper compara biomas enteros y no solo cubos. Comparando algunos modelos que se mencionan en el paper, podemos sobrevalorar mi modelo y decir que tiene mejores estadísticas para detectar algunos cubos mejor que otros modelos mencionados en el paper, como por ejemplo el bloque de esmeralda, el netherrack y los ladrillos. También podemos ver una gran similitud cuando detectan los ores de diamante, oro y hierro. Al probar con otras imágenes del mundo real, en mi modelo 2 podemos ver una notoriedad en el resultado del modelo 2 vs. modelo 1 porque hay patrones que aprendió de una mejor manera que el modelo 1.Finalmente, en los siguientes pasos podríamos probar el modelo con imágenes más complejas, como veremos en secciones posteriores.
 
+## Probando en el mundo real
+Aquí comparamos los dos modelos con imagenes sacadas de la web.
+
+Imagen Fácil - Reconoicer el diamante
+<img width="736" height="736" alt="diamond_ore_test" src="https://github.com/user-attachments/assets/696d739c-4210-4d86-89c0-6fadc48c5730" />
+
+Imagen Mediana - Reconocer Glowstone
+
+<img width="278" height="181" alt="glostone_group" src="https://github.com/user-attachments/assets/8a707e97-2a77-4cc0-b493-825b03fa1487" />
+
+Imagen mediana - Reconocer la arena
+
+<img width="854" height="480" alt="Sand PNG" src="https://github.com/user-attachments/assets/ca1f350f-78e2-4b5f-97ec-266e4abd56e8" />
+
+Imagen Compleja - Reconocer el gold ore
+
+<img width="300" height="300" alt="Nether_Gold_Ore_JE2_BE1" src="https://github.com/user-attachments/assets/3ab0a1a1-5d64-45d8-b075-c4a219917dca" />
+
+
+
 ## Link del Notebook:
 [Este es el link del NoteBook](https://colab.research.google.com/drive/1Q5tc7Oq1ucE3rf68SjzLTgfQpv8-9B78?usp=sharing) si hay algún problema en este repositorio, dejo el archivo de igual forma.
 
