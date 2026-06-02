@@ -168,7 +168,8 @@ Al comparar los datos del estado del arte en el paper que encontré y mi problem
 Aquí comparamos los dos modelos con imagenes sacadas de la web.
 
 Imagen Fácil - Reconocer el diamante
-<img width="736" height="736" alt="diamond_ore_test" src="https://github.com/user-attachments/assets/696d739c-4210-4d86-89c0-6fadc48c5730" />
+<img width="968" height="742" alt="image" src="https://github.com/user-attachments/assets/b1a42d33-bba6-4b83-a324-06fdd95c3371" />
+
 
 Resultado:
 <img width="777" height="647" alt="image" src="https://github.com/user-attachments/assets/28d65312-9ad6-4ca0-b062-c2a3a5f13f60" />
@@ -179,7 +180,7 @@ Imagen Mediana - Reconocer Glowstone
 
 Resultado:
 
-<img width="647" height="690" alt="image" src="https://github.com/user-attachments/assets/e288250e-643f-4e9c-956c-c311a1c0c38b" />
+<img width="978" height="754" alt="image" src="https://github.com/user-attachments/assets/2ca730c0-f761-4a44-9e0d-384ef8dfc81a" />
 
 
 ## Link del Notebook:
